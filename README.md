@@ -7,6 +7,7 @@ A Firefox/Zen extension that gives `at4.typewriter.at` a black-and-red theme.
 - Date filters, defaulting to the last 30 days; attempt history is cached locally per account.
 - Lesson controls to hide the virtual keyboard (klick right corner with your mouse while lessons), pause (same thing but when keyboard hidden, pause is in the left corner), and drag the lesson panel (right corner of the panel).
 - Grade colors and dark styling for lesson controls and forms.
+- typefish game is a bit darker
 
 ## Removed
 - Ad-block notice and Typewriter logo. (if you use adblock (recommended))
