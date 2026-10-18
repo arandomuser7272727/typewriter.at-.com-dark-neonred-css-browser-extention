@@ -1,0 +1,818 @@
+/*
+ * Leave achievement/medal areas out of the theme so their existing artwork
+ * and colors remain intact. The keyword checks cover common class/id names.
+ */
+:root {
+  color-scheme: dark;
+  --tw-bg: #000;
+  --tw-panel: #090909;
+  --tw-red: #ff1744;
+  --tw-red-soft: #ff365f;
+  --tw-text: #f5f5f5;
+  --tw-grade-1: #00c853;
+  --tw-grade-2: #76e62f;
+  --tw-grade-3: #ffeb3b;
+  --tw-grade-4: #ff9800;
+  --tw-grade-5: #f44336;
+}
+
+html,
+body {
+  background: var(--tw-bg) !important;
+  color: var(--tw-text) !important;
+  scrollbar-color: #5a1020 #050505;
+}
+
+/* Keep the recurring ad-blocker notice out of the page. */
+.messageTopBannerWrapper,
+.messageTopBannerWrapper .messageTopBanner {
+  display: none !important;
+}
+
+/* Remove the site's dedicated logo tile without affecting navigation. */
+.roundBox.logoFree {
+  display: none !important;
+}
+
+body :not([class*="medal" i] *):not([id*="medal" i] *):not([class*="achievement" i] *):not([id*="achievement" i] *):not([class*="reward" i] *):not([id*="reward" i] *):not([class*="award" i] *):not([id*="award" i] *):not([class*="badge" i] *):not([id*="badge" i] *):not([class*="logo" i]):not([id*="logo" i]):not([class*="logo" i] *):not([id*="logo" i] *):not(.navbar-brand):not(.navbar-brand *):not(.brand):not(.brand *):not(.grade):not(.grade *):not([class*="tw-grade-badge-"]) {
+  color: var(--tw-text) !important;
+}
+
+main,
+#main,
+#content,
+#page,
+#page-wrapper,
+#wrap,
+#backgroundHeader,
+#contentHead,
+.contentWrapper,
+.roundBox,
+.gradientBox,
+.container,
+.container-fluid,
+.content,
+.main-content,
+.site-content {
+  background-color: var(--tw-bg) !important;
+  color: var(--tw-text) !important;
+}
+
+#contentHead .navigation > li {
+  background-color: #100206 !important;
+  border: 1px solid var(--tw-red) !important;
+  box-shadow: 0 0 8px rgb(255 23 68 / 38%);
+}
+
+#contentHead .navigation > li > a {
+  background-color: transparent !important;
+  color: var(--tw-text) !important;
+}
+
+#contentHead .navigation > li:hover,
+#contentHead .navigation > li.active {
+  background-color: #290611 !important;
+  box-shadow: 0 0 12px rgb(255 23 68 / 65%);
+}
+
+#cssmenu {
+  background: #100206 !important;
+  border: 1px solid var(--tw-red) !important;
+  box-shadow: 0 0 10px rgb(255 23 68 / 35%);
+}
+
+#cssmenu > ul > li {
+  background: transparent !important;
+  border-color: #681326 !important;
+}
+
+#cssmenu > ul > li.active,
+#cssmenu > ul > li:hover {
+  background: #290611 !important;
+}
+
+#cssmenu > ul > li > a {
+  background: transparent !important;
+  color: var(--tw-text) !important;
+}
+
+html:not(.tw-settings-page) #contentHead .navigation > li:nth-last-child(-n + 2) {
+  display: none !important;
+}
+
+body .portlet,
+body .portlet-decoration,
+body .portlet-content {
+  background: #090909 !important;
+  background-image: none !important;
+  border-color: #3a111a !important;
+  color: var(--tw-text) !important;
+  box-shadow: 0 0 9px rgb(255 23 68 / 10%) !important;
+}
+
+body #yw1.portlet,
+body #yw1.portlet :is(ul, li) {
+  background: #090909 !important;
+  color: var(--tw-text) !important;
+}
+
+body #yw1.portlet a {
+  color: var(--tw-red-soft) !important;
+}
+
+#contentBody .gridBox {
+  background: #090909 !important;
+  border: 1px solid #681326 !important;
+  box-shadow: 0 0 10px rgb(255 23 68 / 18%);
+}
+
+body table.items {
+  background: #050505 !important;
+  border-color: #681326 !important;
+  color: var(--tw-text) !important;
+}
+
+body table.items thead th {
+  background: #160208 !important;
+  background-image: none !important;
+  border-color: #681326 !important;
+  color: var(--tw-text) !important;
+}
+
+body table.items tbody tr,
+body table.items tbody tr.odd,
+body table.items tbody tr.even {
+  background: #090909 !important;
+  color: var(--tw-text) !important;
+}
+
+body table.items tbody tr:nth-child(even) {
+  background: #111 !important;
+}
+
+body table.items tbody td {
+  background: transparent !important;
+  border-color: #241016 !important;
+  color: var(--tw-text) !important;
+}
+
+body table.items tbody tr:hover,
+body table.items tbody tr:hover td {
+  background: #21060d !important;
+}
+
+#tw-progress-dashboard {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1120px;
+  margin: 12px auto 18px;
+  padding: 12px 0 14px;
+  border-top: 1px solid #541020;
+  border-bottom: 1px solid #541020;
+  color: var(--tw-text);
+}
+
+.tw-progress-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.tw-progress-toolbar h4 {
+  grid-column: 2;
+  margin: 0;
+  color: var(--tw-text);
+  font-size: 14px;
+  text-align: center;
+}
+
+.tw-progress-toolbar label {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.tw-progress-toolbar select {
+  width: auto;
+  min-width: 130px;
+  padding: 5px 26px 5px 8px;
+  border-color: #681326 !important;
+  background-color: #080808 !important;
+  color: var(--tw-text) !important;
+}
+
+.tw-progress-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tw-progress-metric {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 14px;
+  border-right: 1px solid #241016;
+}
+
+.tw-progress-metric:first-child {
+  padding-left: 4px;
+}
+
+.tw-progress-metric:last-child {
+  border-right: 0;
+}
+
+.tw-progress-metric:last-child:nth-child(4n + 1) {
+  grid-column: 2 / span 2;
+}
+
+.tw-progress-metric span {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.tw-progress-metric strong {
+  overflow-wrap: anywhere;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tw-progress-charts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  max-width: 1120px;
+  margin: 12px auto 0;
+}
+
+.tw-progress-chart-count {
+  margin: 10px 0 0;
+  color: #999;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tw-progress-chart {
+  min-width: 0;
+  padding-top: 10px;
+  border-top: 1px solid #241016;
+}
+
+.tw-progress-chart h4 {
+  margin: 0 0 6px;
+  color: var(--tw-text);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tw-progress-chart p {
+  margin: 8px 0;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.tw-progress-chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.tw-chart-gridline {
+  stroke: #30131a;
+  stroke-width: 1;
+}
+
+.tw-chart-line {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tw-chart-point {
+  stroke: #080808;
+  stroke-width: 1;
+}
+
+.tw-chart-label {
+  fill: #999;
+  font-size: 10px;
+}
+
+@media (max-width: 760px) {
+  .tw-progress-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 12px;
+  }
+
+  .tw-progress-metric:nth-child(2) {
+    border-right: 0;
+  }
+
+  .tw-progress-metric:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+}
+
+/* Preserve the site's five distinct grade colors in legends and popups. */
+div.grade:nth-of-type(1) {
+  background: var(--tw-grade-1) !important;
+  color: #101010 !important;
+}
+
+div.grade:nth-of-type(2) {
+  background: var(--tw-grade-2) !important;
+  color: #101010 !important;
+}
+
+div.grade:nth-of-type(3) {
+  background: var(--tw-grade-3) !important;
+  color: #101010 !important;
+}
+
+div.grade:nth-of-type(4) {
+  background: var(--tw-grade-4) !important;
+  color: #101010 !important;
+}
+
+div.grade:nth-of-type(5) {
+  background: var(--tw-grade-5) !important;
+  color: #fff !important;
+}
+
+/* Color the numeric note badges in each lesson-table row, too. */
+body table.items td.grid-cell-right > span.tw-grade-badge-1 {
+  background: var(--tw-grade-1) !important;
+  color: #101010 !important;
+}
+
+body table.items td.grid-cell-right > span.tw-grade-badge-2 {
+  background: var(--tw-grade-2) !important;
+  color: #101010 !important;
+}
+
+body table.items td.grid-cell-right > span.tw-grade-badge-3 {
+  background: var(--tw-grade-3) !important;
+  color: #101010 !important;
+}
+
+body table.items td.grid-cell-right > span.tw-grade-badge-4 {
+  background: var(--tw-grade-4) !important;
+  color: #101010 !important;
+}
+
+body table.items td.grid-cell-right > span.tw-grade-badge-5 {
+  background: var(--tw-grade-5) !important;
+  color: #fff !important;
+}
+
+/* Style dynamic grading popups, which are injected after page load. */
+body .popup,
+body .popuptxt,
+body [id^="gradingInfo_"] {
+  background: #090909 !important;
+  border: 1px solid #681326 !important;
+  border-radius: 6px !important;
+  color: var(--tw-text) !important;
+  box-shadow: 0 0 12px rgb(255 23 68 / 28%) !important;
+}
+
+body .popup :is(table, th, td),
+body .popuptxt :is(table, th, td),
+body [id^="gradingInfo_"] :is(table, th, td) {
+  background-color: #090909 !important;
+  border-color: #3a111a !important;
+  color: var(--tw-text) !important;
+}
+
+body :is(.panel, .well, .jumbotron, .card, fieldset, .modal-content, .dropdown-menu, .list-group-item, table, .table, .gradientBox):not([class*="medal" i]):not([id*="medal" i]):not([class*="achievement" i]):not([id*="achievement" i]):not([class*="reward" i]):not([id*="reward" i]):not([class*="award" i]):not([id*="award" i]):not([class*="badge" i]):not([id*="badge" i]):not([class*="medal" i] *):not([id*="medal" i] *):not([class*="achievement" i] *):not([id*="achievement" i] *):not([class*="reward" i] *):not([id*="reward" i] *):not([class*="award" i] *):not([id*="award" i] *):not([class*="badge" i] *):not([id*="badge" i] *) {
+  background-color: var(--tw-panel) !important;
+  color: var(--tw-text) !important;
+  border-color: #3a111a !important;
+  box-shadow: 0 0 9px rgb(255 23 68 / 10%);
+}
+
+body :is(.hud_tops, .ui-dialog, .ui-dialog-content, .ui-dialog-titlebar, .ui-dialog-buttonpane, .ui-widget-content, .ui-state-default, .ui-widget-header) {
+  background-color: var(--tw-panel) !important;
+  background-image: none !important;
+  border-color: #681326 !important;
+  color: var(--tw-text) !important;
+  box-shadow: 0 0 9px rgb(255 23 68 / 18%);
+}
+
+/* Darken the page behind pause/start dialogs with a translucent black veil. */
+body .ui-widget-overlay.ui-front {
+  background: rgb(0 0 0 / 68%) !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Make the three lesson stats cards blend into the black page background. */
+#hud_top :is(#hud_top1, #hud_top2, #tip) {
+  background: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#hud_info,
+#hudtxt {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--tw-text) !important;
+}
+
+#hudtxt :is(#text_done, [id^="text_todo_"]),
+#hudtxt :is(#text_done, [id^="text_todo_"]) span {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Mark only the current character with a subtle dark underline, not a gray block. */
+#hudtxt [id^="text_todo_"] > span:first-child {
+  background: transparent !important;
+  box-shadow: none !important;
+  text-decoration: underline solid #3a3a3a 2px !important;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 3px;
+}
+
+#hud_top1 > div:first-child > span:first-child {
+  color: #9bff4d !important;
+  text-shadow: 0 0 6px rgb(155 255 77 / 50%);
+}
+
+#hud_top1 > div:first-child > span:nth-of-type(2) {
+  color: #ff6682 !important;
+  text-shadow: 0 0 6px rgb(255 54 95 / 55%);
+}
+
+#percentageIncorrect {
+  color: #ff9bad !important;
+}
+
+#hud_top1 > div:nth-child(2) > span:first-child {
+  color: #f5f5f5 !important;
+}
+
+#hud_top1 > div:nth-child(2) > span:last-of-type {
+  color: #ff6682 !important;
+  text-shadow: 0 0 6px rgb(255 54 95 / 55%);
+}
+
+#percenctageGradeRed {
+  background-color: #ff1744 !important;
+  box-shadow: 0 0 8px rgb(255 23 68 / 65%);
+}
+
+#charsDone {
+  background-color: #ff1744 !important;
+  box-shadow: 0 0 8px rgb(255 23 68 / 65%);
+}
+
+#hudtxt {
+  border-top: 1px solid #681326 !important;
+  border-bottom: 1px solid #681326 !important;
+  box-shadow: 0 0 10px rgb(255 23 68 / 20%);
+}
+
+.keyboard .def {
+  background-color: #100207 !important;
+  background-image: none !important;
+  border-color: var(--tw-red) !important;
+  color: var(--tw-text) !important;
+  box-shadow: 0 0 8px rgb(255 23 68 / 35%), inset 0 0 8px rgb(255 23 68 / 10%) !important;
+}
+
+/* Neutral/special keyboard keys were still using the site's gray artwork. */
+#contentBodyKeyboard .keyboard > :is(.t10, .t15, .t20, .tPause) > .def {
+  background-color: #050505 !important;
+  background-image: none !important;
+  border-color: #3a111a !important;
+  box-shadow: inset 0 0 8px rgb(255 23 68 / 10%) !important;
+}
+
+.keyboard [class*="GR"] > .def {
+  background-color: #4a0717 !important;
+  border-color: #ff6682 !important;
+  box-shadow: 0 0 14px rgb(255 23 68 / 75%), inset 0 0 10px rgb(255 23 68 / 25%) !important;
+}
+
+.keyboard .def .kb,
+.keyboard .def > div {
+  color: var(--tw-text) !important;
+  text-shadow: 0 0 5px rgb(255 23 68 / 50%);
+}
+
+body :is(a[class*="button" i], button, input[type="button"], input[type="submit"], input[type="reset"], .btn, .button, .close, [role="button"]):not([class*="medal" i] *):not([id*="medal" i] *):not([class*="achievement" i] *):not([id*="achievement" i] *):not([class*="reward" i] *):not([id*="reward" i] *):not([class*="award" i] *):not([id*="award" i] *):not([class*="badge" i] *):not([id*="badge" i] *) {
+  accent-color: var(--tw-red);
+}
+
+body a:not([class*="medal" i] *):not([id*="medal" i] *):not([class*="achievement" i] *):not([id*="achievement" i] *):not([class*="reward" i] *):not([id*="reward" i] *):not([class*="award" i] *):not([id*="award" i] *):not([class*="badge" i] *):not([id*="badge" i] *) {
+  color: var(--tw-red-soft) !important;
+  text-decoration-color: rgb(255 23 68 / 65%) !important;
+}
+
+body :is(a[class*="button" i], button, input[type="button"], input[type="submit"], input[type="reset"], .btn, .button, .close, [role="button"]):not([class*="medal" i] *):not([id*="medal" i] *):not([class*="achievement" i] *):not([id*="achievement" i] *):not([class*="reward" i] *):not([id*="reward" i] *):not([class*="award" i] *):not([id*="award" i] *):not([class*="badge" i] *):not([id*="badge" i] *) {
+  background-color: #120308 !important;
+  border: 1px solid var(--tw-red) !important;
+  border-radius: 4px !important;
+  color: var(--tw-text) !important;
+  box-shadow: 0 0 7px rgb(255 23 68 / 28%);
+  transition: background-color 120ms ease, box-shadow 120ms ease;
+}
+
+body :is(a[class*="button" i], button, input[type="button"], input[type="submit"], input[type="reset"], .btn, .button, .close, [role="button"]):hover:not([class*="medal" i] *):not([id*="medal" i] *):not([class*="achievement" i] *):not([id*="achievement" i] *):not([class*="reward" i] *):not([id*="reward" i] *):not([class*="award" i] *):not([id*="award" i] *):not([class*="badge" i] *):not([id*="badge" i] *) {
+  background-color: #290611 !important;
+  box-shadow: 0 0 12px rgb(255 23 68 / 65%);
+}
+
+/* jQuery UI lesson dialogs use their own white button theme. */
+body .ui-dialog :is(.ui-dialog-buttonpane button, button.ui-button, button.ui-state-default) {
+  background: #120308 !important;
+  background-image: none !important;
+  border: 1px solid var(--tw-red) !important;
+  color: var(--tw-text) !important;
+  box-shadow: 0 0 7px rgb(255 23 68 / 28%) !important;
+}
+
+body .ui-dialog :is(.ui-dialog-buttonpane button, button.ui-button, button.ui-state-default):hover {
+  background: #290611 !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+
+body .gradientBox a.cockpitStartButton,
+body .gradientBox a.announcementLinkButton,
+body input#dont-show-join-teacher-button,
+body input#join-teacher-button,
+body input[type="button"],
+body input[type="submit"],
+body input[type="reset"] {
+  background: #160208 !important;
+  border: 1px solid var(--tw-red) !important;
+  color: var(--tw-text) !important;
+  box-shadow: 0 0 8px rgb(255 23 68 / 38%) !important;
+}
+
+body .gradientBox a.cockpitStartButton:hover,
+body .gradientBox a.announcementLinkButton:hover,
+body input#dont-show-join-teacher-button:hover,
+body input#join-teacher-button:hover,
+body input[type="button"]:hover,
+body input[type="submit"]:hover,
+body input[type="reset"]:hover {
+  background: #300612 !important;
+  box-shadow: 0 0 13px rgb(255 23 68 / 70%) !important;
+}
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"]),
+select,
+textarea {
+  background-color: #080808 !important;
+  border: 1px solid #681326 !important;
+  color: var(--tw-text) !important;
+  caret-color: var(--tw-red);
+}
+
+/* Keep the settings slider, grading bands, and country picker readable. */
+#repeat-slider.ui-slider-vertical {
+  box-sizing: border-box !important;
+  width: 16px !important;
+  border: 1px solid #681326 !important;
+  border-radius: 8px !important;
+  background: #080808 !important;
+  box-shadow: inset 0 0 6px rgb(255 23 68 / 20%) !important;
+}
+
+#repeat-slider .ui-slider-range {
+  border-radius: 8px !important;
+  background: #681326 !important;
+}
+
+#repeat-slider .ui-slider-handle {
+  left: 50% !important;
+  width: 28px !important;
+  height: 20px !important;
+  margin-left: 0 !important;
+  margin-bottom: -10px !important;
+  transform: translateX(-50%);
+  border: 2px solid #f5f5f5 !important;
+  border-radius: 5px !important;
+  background: #ff1744 !important;
+  box-shadow: 0 0 9px rgb(255 23 68 / 45%) !important;
+  cursor: grab !important;
+}
+
+#repeat-slider .ui-slider-handle:active {
+  cursor: grabbing !important;
+}
+
+#gradeForm .gradeRow,
+#gradeForm .gradeRow :not(input):not(select) {
+  color: #101010 !important;
+  text-shadow: none !important;
+}
+
+#gradeForm .gradeRow input.gradingSystemPercentInput {
+  border: 1px solid #681326 !important;
+  background: #080808 !important;
+  color: var(--tw-text) !important;
+}
+
+#gradeForm .gradeRow input.gradingSystemPercentSymbol {
+  border: 0 !important;
+  background: transparent !important;
+  color: #101010 !important;
+  box-shadow: none !important;
+}
+
+body #profilLanguageSwitch .dd-select,
+body #profilLanguageSwitch .dd-options,
+body #profilLanguageSwitch .dd-option {
+  border-color: #681326 !important;
+  background: #080808 !important;
+  background-image: none !important;
+  color: var(--tw-text) !important;
+}
+
+body #profilLanguageSwitch .dd-selected,
+body #profilLanguageSwitch .dd-option-text,
+body #profilLanguageSwitch .dd-selected-text {
+  background: transparent !important;
+  color: var(--tw-text) !important;
+}
+
+body #profilLanguageSwitch .dd-option-selected {
+  background: #290611 !important;
+}
+
+body #profilLanguageSwitch .dd-pointer-down {
+  border-top-color: var(--tw-red) !important;
+}
+
+body #contentBody .grid-view table.items {
+  background: #050505 !important;
+  background-image: none !important;
+}
+
+body #contentBody .grid-view table.items thead th {
+  background: #160208 !important;
+  background-image: none !important;
+  color: var(--tw-text) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--tw-red) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 10px rgb(255 23 68 / 55%) !important;
+}
+
+hr {
+  border-color: #541020 !important;
+  box-shadow: 0 0 5px rgb(255 23 68 / 25%);
+}
+
+::selection {
+  background: #a9002b;
+  color: #fff;
+}
+
+/* Lesson-only controls: nearly invisible, oversized click targets. */
+body #tw-keyboard-toggle,
+body #tw-pause-toggle {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  width: 96px !important;
+  height: 96px !important;
+  min-width: 96px !important;
+  min-height: 96px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #000 !important;
+  box-shadow: none !important;
+  opacity: 0.015 !important;
+  cursor: pointer !important;
+}
+
+body #tw-keyboard-toggle {
+  right: 0 !important;
+  bottom: 0 !important;
+}
+
+body #tw-pause-toggle {
+  left: 0 !important;
+  bottom: 0 !important;
+}
+
+/* The corner controls are intentionally invisible; suppress focus/active rings. */
+body :is(#tw-keyboard-toggle, #tw-pause-toggle):is(:focus, :focus-visible, :active) {
+  appearance: none !important;
+  outline: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#contentBodyKeyboard {
+  position: relative;
+}
+
+#contentBodyKeyboard.tw-keyboard-hidden .keyboard {
+  display: none !important;
+}
+
+#contentBodyKeyboard.tw-keyboard-hidden > div:has(> .keyboard) {
+  display: none !important;
+}
+
+#contentBodyKeyboard.tw-keyboard-hidden #input_area:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  caret-color: transparent !important;
+}
+
+#contentBodyKeyboard.tw-keyboard-hidden :is(
+  .finger-line,
+  .fingerLine,
+  .finger-guide,
+  .fingerGuide,
+  .keyboard-guide,
+  .keyboardGuide,
+  .key-guide,
+  .keyGuide,
+  .keyboard-hint,
+  .keyboardHint,
+  .key-hint,
+  .keyHint,
+  .hint-line,
+  .hintLine,
+  [id*="finger" i],
+  [class*="finger" i],
+  [id*="guide" i],
+  [class*="guide" i],
+  [id*="hint-line" i],
+  [class*="hint-line" i]
+) {
+  display: none !important;
+}
+
+#contentBodyKeyboard.tw-keyboard-hidden #tast,
+#contentBodyKeyboard.tw-keyboard-hidden::before,
+#contentBodyKeyboard.tw-keyboard-hidden::after,
+#contentBodyKeyboard.tw-keyboard-hidden #hud_info::before,
+#contentBodyKeyboard.tw-keyboard-hidden #hud_info::after,
+#contentBodyKeyboard.tw-keyboard-hidden #hudtxt::before,
+#contentBodyKeyboard.tw-keyboard-hidden #hudtxt::after {
+  display: none !important;
+  content: none !important;
+}
+
+.tw-hidden-keyboard-guide {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body.tw-lesson-page .infoWrapper {
+  display: none !important;
+}
+
+body.tw-lesson-controls-hidden #contentHead .navigationWrapper {
+  display: none !important;
+}
+
+#contentBodyKeyboard .tw-panel-drag-handle {
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 28px;
+  background: #000;
+  opacity: 0.015;
+  cursor: move;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}

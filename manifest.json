@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Typewriter Neon Dark",
+  "version": "1.0.0",
+  "description": "Schwarzes Design mit roten Neon-Akzenten fuer Typewriter-Seiten und Lektionen.",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://at4.typewriter.at/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "typewriter-neon-dark@local",
+      "strict_min_version": "109.0"
+    }
+  }
+}
