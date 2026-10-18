@@ -23,10 +23,9 @@ const privacyStyle = `
   }
 `;
 
-document.documentElement?.classList.toggle(
-  "tw-settings-page",
-  new URLSearchParams(location.search).get("r") === "option/index",
-);
+const currentRoute = new URLSearchParams(location.search).get("r");
+document.documentElement?.classList.toggle("tw-settings-page", currentRoute === "option/index");
+document.documentElement?.classList.toggle("tw-typefish-page", currentRoute === "typefish/start");
 
 const styledRoots = new WeakSet();
 

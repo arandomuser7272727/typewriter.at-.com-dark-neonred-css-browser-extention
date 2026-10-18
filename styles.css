@@ -34,6 +34,21 @@ body {
   display: none !important;
 }
 
+/* Tone down Typefish's bright canvas while preserving its game artwork. */
+html.tw-typefish-page #typefishAnimationContainer,
+html.tw-typefish-page #typefishCanvas {
+  background: #050505 !important;
+  background-color: #050505 !important;
+}
+
+html.tw-typefish-page #typefishCanvas {
+  filter: brightness(0.48) saturate(0.9) contrast(1.12);
+}
+
+html.tw-typefish-page #typefishDomOverlayContainer {
+  background: transparent !important;
+}
+
 #contentBody .gradientBox.tw-hide-overview-news {
   display: none !important;
 }
