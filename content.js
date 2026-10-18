@@ -407,6 +407,25 @@ let activeLessonPanel = null;
 let isLessonKeyboardHidden = false;
 let lessonPanelOffset = { left: 0, top: 0 };
 
+function hideOverviewNews(node = document.documentElement) {
+  if (new URLSearchParams(location.search).get("r") !== "user/overview" || !(node instanceof Element)) {
+    return;
+  }
+
+  const headings = [];
+  if (node.matches(".gradientBox > h3") && node.closest("#contentBody")) {
+    headings.push(node);
+  }
+  headings.push(...node.querySelectorAll("#contentBody .gradientBox > h3"));
+
+  for (const heading of headings) {
+    const title = heading.textContent.replace(/\s+/g, " ").trim();
+    if (/^Was gibt es Neues beim\s+Typewriter\?$/i.test(title)) {
+      heading.closest(".gradientBox")?.classList.add("tw-hide-overview-news");
+    }
+  }
+}
+
 function setKeyboardGuideVisibility(hidden) {
   const markedElements = document.querySelectorAll(".tw-hidden-keyboard-guide");
   for (const element of markedElements) {
@@ -647,6 +666,7 @@ const observer = new MutationObserver((records) => {
     for (const node of record.addedNodes) {
       scanForShadowRoots(node);
       observeGradeTables(node);
+      hideOverviewNews(node);
       if (node instanceof Element) {
         lessonControlsMayHaveChanged ||=
           node.matches("#contentBodyKeyboard") ||
@@ -673,5 +693,6 @@ observer.observe(document.documentElement, {
 });
 scanForShadowRoots(document.documentElement);
 observeGradeTables(document.documentElement);
+hideOverviewNews();
 styleGradeBadges();
 setupLessonControls();

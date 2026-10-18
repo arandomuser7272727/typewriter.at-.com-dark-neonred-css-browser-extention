@@ -34,6 +34,10 @@ body {
   display: none !important;
 }
 
+#contentBody .gradientBox.tw-hide-overview-news {
+  display: none !important;
+}
+
 body :not([class*="medal" i] *):not([id*="medal" i] *):not([class*="achievement" i] *):not([id*="achievement" i] *):not([class*="reward" i] *):not([id*="reward" i] *):not([class*="award" i] *):not([id*="award" i] *):not([class*="badge" i] *):not([id*="badge" i] *):not([class*="logo" i]):not([id*="logo" i]):not([class*="logo" i] *):not([id*="logo" i] *):not(.navbar-brand):not(.navbar-brand *):not(.brand):not(.brand *):not(.grade):not(.grade *):not([class*="tw-grade-badge-"]) {
   color: var(--tw-text) !important;
 }
