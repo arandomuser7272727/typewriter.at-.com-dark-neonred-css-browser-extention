@@ -798,7 +798,7 @@ body :is(#tw-keyboard-toggle, #tw-pause-toggle):is(:focus, :focus-visible, :acti
   visibility: hidden !important;
 }
 
-body.tw-lesson-page .infoWrapper {
+html:not(.tw-settings-page) .infoWrapper {
   display: none !important;
 }
 
